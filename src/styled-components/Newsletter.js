@@ -14,10 +14,28 @@ border-radius: 1.7rem;
 padding: 1rem .5rem ;
 `
 
+const NewsletterInfo = styled.article`
+text-align: center;
+li{
+    list-style: none;
+}
+`
+
 const Title = styled.h1`
 color: ${Color.DarkSlateGrey};
 font-size: 2.2rem;
 padding: 2rem 0 0 2.6rem;
+margin-bottom: 2rem;
 `
 
-export {Title,Container}
+const Paragraph = styled.p`
+text-align:start;
+margin: 1rem;
+color: ${Color.CharcoalGrey};
+`
+const List = styled.li`
+color: ${Color.DarkSlateGrey};
+`
+
+
+export {Title,Container,NewsletterInfo,Paragraph, List}
