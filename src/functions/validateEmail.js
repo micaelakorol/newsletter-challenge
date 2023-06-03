@@ -1,16 +1,21 @@
 import React from 'react'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const validateEmail = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
-    const [showError, setShowError] = useState(false)
+    const navigate = useNavigate();
   
     const emailForm = () => {
       const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-      if (!emailRegex.test(email)) {
-          setError('Ingrese un correo electrónico válido');  
-      } else {
+      if (!emailRegex.test(email)|| email == '') {
+          setError('*Ingrese un correo electrónico válido');  
+      } 
+      else {
+        setTimeout(() => {
+          navigate('/success', { replace: true });
+        }, 1000);
         setError('');
       }
     };

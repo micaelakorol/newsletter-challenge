@@ -1,9 +1,11 @@
 import React from 'react'
 
-const success = () => {
+const Success = () => {
   return (
-    <div>success</div>
+   <>
+   <h1>hii</h1>
+   </>
   )
 }
 
-export default success
+export default Success
