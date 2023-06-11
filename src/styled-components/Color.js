@@ -6,6 +6,8 @@ Grey:'hsl(231, 7%, 60%)',
 White:'hsl(0, 0%, 100%)',
 Orange:'rgb(255,100,74)',
 Pink:'rgb(252,82,119)',
+BgInputError:'#FFE0DD',
+InputError:'#FF6457'
 }
 
 export default Color;

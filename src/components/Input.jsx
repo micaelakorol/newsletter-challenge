@@ -3,6 +3,7 @@ import {
   BtnSuscribe,
   ContainerSuscribe,
   EmailAdress,
+  Errors,
   InputEmail,
 } from "../styled-components/Input";
 import validateEmail from "../functions/validateEmail";
@@ -13,6 +14,7 @@ const Input = () => {
   return (
     <ContainerSuscribe>
       <EmailAdress htmlFor="email">Email adress</EmailAdress>
+      <Errors>{error}</Errors>
       <InputEmail
         type="email"
         placeholder="email@company.com"
@@ -20,8 +22,8 @@ const Input = () => {
         value={email}
         onChange={handleChange}
         onBlur={emailForm}
+        className={error && 'error'}
       />
-      {error && <div style={{ color: 'red' }}>{error}</div>}
       <BtnSuscribe type="submit">Suscribe to monthly newsletter</BtnSuscribe>
     </ContainerSuscribe>
   );
