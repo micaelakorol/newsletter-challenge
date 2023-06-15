@@ -4,6 +4,7 @@ import "./styled-components/global.css";
 import { Bg } from "./styled-components/App";
 
 const App = () => {
+
  
   return (
     <Bg>
