@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { MyContext } from "../context/Context";
 
 const validateEmail = () => {
-  const { setError } = useContext(MyContext);
-  const [email, setEmail] = useState("");
+  const { setError, email, setEmail } = useContext(MyContext);
+
   const navigate = useNavigate();
 
   const emailForm = () => {
@@ -24,7 +24,7 @@ const validateEmail = () => {
     setEmail(event.target.value);
   };
 
-  return { handleChange, emailForm, email, setEmail };
+  return { handleChange, emailForm };
 };
 
 export default validateEmail;

@@ -10,8 +10,8 @@ import validateEmail from "../functions/validateEmail";
 import { MyContext } from "../context/Context";
 
 const Input = () => {
-  const { email, emailForm, handleChange } = validateEmail();
-  const {error} = useContext(MyContext)
+  const { emailForm, handleChange } = validateEmail();
+  const {error, email} = useContext(MyContext)
   return (
     <ContainerSuscribe>
       <EmailAdress htmlFor="email">Email adress</EmailAdress>

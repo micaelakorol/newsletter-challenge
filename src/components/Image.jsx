@@ -5,8 +5,8 @@ import Mobile from '../assets/images/illustration-sign-up-mobile.svg'
 const Image = () => {
   return (
     <SectionImage>
-      <img src={Desktop} alt="" className='desktop'/>
-      <img src={Mobile} alt="" className='mobile'/>
+      <img src={Desktop} alt="image-desktop" className='desktop'/>
+      <img src={Mobile} alt="image-mobile" className='mobile'/>
     </SectionImage>
   )
 }
