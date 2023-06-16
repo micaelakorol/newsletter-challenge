@@ -3,17 +3,15 @@ import { useState } from "react";
 
 export const MyContext = createContext();
 
-const UserProvider = ({children}) => {
+const UserProvider = ({ children }) => {
+  const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
 
-const [error, setError] = useState("");
-const [email, setEmail] = useState("");
-
-return (
-  <MyContext.Provider value={{error, setError, email, setEmail}}>
-    { children }
-  </MyContext.Provider>
-);
-}
-
+  return (
+    <MyContext.Provider value={{ error, setError, email, setEmail }}>
+      {children}
+    </MyContext.Provider>
+  );
+};
 
 export default UserProvider;

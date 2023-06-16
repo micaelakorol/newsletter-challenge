@@ -15,7 +15,7 @@ const Success = () => {
         it and click the button inside to confirm your subscription. Dismiss
         message
       </ConfirmationEmail>
-      <BtnSuscribe type="submit" className="btn">Dismiss message</BtnSuscribe>
+      <BtnSuscribe to={'/'} className="btn">Dismiss message</BtnSuscribe>
     </ContainerSucces>
   );
 };

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Color from "./Color";
+import { Link } from "react-router-dom";
 
-const ContainerSuscribe = styled.section`
+const ContainerSuscribe = styled.form`
   display: flex;
   flex-direction: column;
   width: 95%;
@@ -35,9 +36,11 @@ const EmailAdress = styled.label`
   margin-top: 1.5rem;
 `;
 
-const BtnSuscribe = styled.button`
+const BtnSuscribe = styled(Link)`
   background-color: ${Color.DarkSlateGrey};
   color: ${Color.White};
+  text-decoration: none;
+  text-align: center;
   font-weight: 700;
   padding: 0.7rem;
   border: none;

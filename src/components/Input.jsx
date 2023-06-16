@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import {
   BtnSuscribe,
   ContainerSuscribe,
@@ -10,10 +10,10 @@ import validateEmail from "../functions/validateEmail";
 import { MyContext } from "../context/Context";
 
 const Input = () => {
-  const { emailForm, handleChange } = validateEmail();
-  const {error, email} = useContext(MyContext)
+  const { emailForm, handleChange, handleSubmit } = validateEmail();
+  const { error, email } = useContext(MyContext);
   return (
-    <ContainerSuscribe>
+    <ContainerSuscribe onSubmit={handleSubmit}>
       <EmailAdress htmlFor="email">Email adress</EmailAdress>
       <Errors>{error}</Errors>
       <InputEmail
@@ -25,7 +25,9 @@ const Input = () => {
         onBlur={emailForm}
         className={error && "error"}
       />
-      <BtnSuscribe type="submit">Suscribe to monthly newsletter</BtnSuscribe>
+      <BtnSuscribe to={error == null && "/success"} onClick={emailForm}>
+        Suscribe to monthly newsletter
+      </BtnSuscribe>
     </ContainerSuscribe>
   );
 };
