@@ -9,7 +9,7 @@ import { MyContext } from "../context/Context";
 import { BtnSuscribe } from "../styled-components/Input";
 
 const Success = () => {
-  const { email } = useContext(MyContext);
+  const { email, cleanField } = useContext(MyContext);
   return (
     <ContainerSucces>
       <img src={IconSuccess} alt="icon-success" className="success" />
@@ -19,7 +19,7 @@ const Success = () => {
         and click the button inside to confirm your subscription. Dismiss
         message
       </ConfirmationEmail>
-      <BtnSuscribe to={"/"} className="btn">
+      <BtnSuscribe to={"/"} className="btn" onClick={() => cleanField()}>
         Dismiss message
       </BtnSuscribe>
     </ContainerSucces>
