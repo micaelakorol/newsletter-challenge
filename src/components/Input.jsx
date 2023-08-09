@@ -6,7 +6,7 @@ import {
   Errors,
   InputEmail,
 } from "../styled-components/Input";
-import validateEmail from "../functions/validateEmail";
+import validateEmail from "../services/functions/validateEmail";
 import { MyContext } from "../context/Context";
 
 const Input = () => {

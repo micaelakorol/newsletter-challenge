@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from "react";
-import { MyContext } from "../context/Context";
+import React, { useContext } from "react";
+import { MyContext } from "../../context/Context";
 
 const validateEmail = () => {
   const { setError, email, setEmail } = useContext(MyContext);
@@ -23,7 +23,6 @@ const validateEmail = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
 
   return { handleChange, emailForm, handleSubmit };
 };

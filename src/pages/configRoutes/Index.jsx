@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
-import Error from "../pages/Error";
-import PrivateRoute from "../pages/PrivateRoute";
-import Success from "../pages/success";
+import App from "../../App";
+import Error from "../Error/Error";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Success from "../MessageSuccess/success";
 
 export const router = createBrowserRouter([
   {

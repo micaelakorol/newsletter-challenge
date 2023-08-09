@@ -1,6 +1,6 @@
 import React from "react";
 import { List, Paragraph } from "../styled-components/Newsletter";
-import subscriptionBenefits from "./data/benefit";
+import subscriptionBenefits from "../services/data/benefitSuscription";
 const BodyNewsletter = () => {
   let list = subscriptionBenefits.item;
   return (

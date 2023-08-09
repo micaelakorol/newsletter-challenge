@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import validateEmail from "../functions/validateEmail";
 import { Navigate, Outlet } from "react-router-dom";
-import { MyContext } from "../context/Context";
+import { MyContext } from "../../context/Context";
 
 const PrivateRoute = () => {
   const { error } = useContext(MyContext);
