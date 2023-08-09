@@ -3,10 +3,10 @@ import {
   ConfirmationEmail,
   TitleSuccess,
   ContainerSucces,
-} from "../styled-components/Success";
-import IconSuccess from "../assets/images/icon-success.svg";
-import { MyContext } from "../context/Context";
-import { BtnSuscribe } from "../styled-components/Input";
+} from "../../styled-components/Success";
+import IconSuccess from "../../assets/images/icon-success.svg";
+import { MyContext } from "../../context/Context";
+import { BtnSuscribe } from "../../styled-components/Input";
 
 const Success = () => {
   const { email } = useContext(MyContext);

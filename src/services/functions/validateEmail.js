@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { useState } from "react";
-import { MyContext } from "../context/Context";
+import { MyContext } from "../../context/Context";
 
 const validateEmail = () => {
   const { setError, email, setEmail } = useContext(MyContext);
