@@ -4,11 +4,16 @@ import {
   Title,
   NewsletterInfo,
 } from "../styled-components/Newsletter";
-import Image from "./Image";
-import BodyNewsletter from "./BodyNewsletter";
-import Input from "./Input";
+import Image from "./Elements/Image";
+import BodyNewsletter from "./Elements/BodyNewsletter";
+import Input from "./Elements/Input";
+import { MyContext } from "../context/Context";
 
 const Newsletter = () => {
+  const { setEmail } = useContext(MyContext);
+  useEffect(() => {
+    setEmail("");
+  }, []);
   return (
     <Container>
       <NewsletterInfo>

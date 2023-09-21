@@ -5,9 +5,9 @@ import {
   EmailAdress,
   Errors,
   InputEmail,
-} from "../styled-components/Input";
-import validateEmail from "../services/functions/validateEmail";
-import { MyContext } from "../context/Context";
+} from "../../styled-components/Input";
+import validateEmail from "../../services/functions/validateEmail";
+import { MyContext } from "../../context/Context";
 
 const Input = () => {
   const { emailForm, handleChange, handleSubmit } = validateEmail();
