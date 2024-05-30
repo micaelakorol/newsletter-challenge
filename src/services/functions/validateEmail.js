@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { MyContext } from "../../context/Context";
 
 const validateEmail = () => {
   const { setError, email, setEmail } = useContext(MyContext);
-
-  // const navigate = useNavigate();
 
   const emailForm = () => {
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -12,7 +10,6 @@ const validateEmail = () => {
       setError("Valid email required");
     } else {
       setError(null);
-      //   navigate("/success");
     }
   };
 
