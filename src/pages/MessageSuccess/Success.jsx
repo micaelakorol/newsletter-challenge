@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 import {
   ConfirmationEmail,
   TitleSuccess,
   ContainerSucces,
-} from "../../styled-components/Success";
-import IconSuccess from "../../assets/images/icon-success.svg";
-import { MyContext } from "../../context/Context";
-import { BtnSuscribe } from "../../styled-components/Input";
+} from '../../styled-components/Success';
+import IconSuccess from '../../assets/images/icon-success.svg';
+import { MyContext } from '../../context/Context';
+import { BtnSuscribe } from '../../styled-components/Input';
 
 const Success = () => {
   const { email, cleanField } = useContext(MyContext);
@@ -19,7 +19,7 @@ const Success = () => {
         and click the button inside to confirm your subscription. Dismiss
         message
       </ConfirmationEmail>
-      <BtnSuscribe to={"/"} className="btn" onClick={() => cleanField()}>
+      <BtnSuscribe to={'/'} className="btn" onClick={() => cleanField()}>
         Dismiss message
       </BtnSuscribe>
     </ContainerSucces>

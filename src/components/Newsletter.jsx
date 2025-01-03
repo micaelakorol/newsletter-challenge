@@ -1,4 +1,3 @@
-import React, { useContext, useEffect } from "react";
 import {
   Container,
   Title,
@@ -7,13 +6,9 @@ import {
 import Image from "./Elements/Image";
 import BodyNewsletter from "./Elements/BodyNewsletter";
 import Input from "./Elements/Input";
-import { MyContext } from "../context/Context";
 
 const Newsletter = () => {
-  const { setEmail } = useContext(MyContext);
-  useEffect(() => {
-    setEmail("");
-  }, []);
+
   return (
     <Container>
       <NewsletterInfo>
